@@ -1,0 +1,27 @@
+1) faça um programa que le um arquivo de 
+texto onde cada linha representa um numero 
+na forma ... 1 4 7 5 6 9 ... transforme cada linha em um inteiro e escreva em um arquivo binario como inteiro.
+
+2) faça o porcesso inverso da questão 1
+
+3) leia a partir de um arquivo binario uma
+sequencia de numeros inteiros e imprima-os 
+na ordem inversa salvando todos os valores 
+em um vetor.
+
+4) leia um arquivo texto a partir de um 
+arquivo e salve-o usando o minimo de 
+memoria possível (cada linha tem no max 100 
+caracteres) em uma matriz (dinamica obvio), 
+em seguida, imprima a n-esima linha 
+digitada pelo usuário.
+
+5) faça a questão 3 sem salvar os valorem 
+em um vetor. Use recursão.
+
+6) Salve uma serie de structs em um arquivo 
+binario e, em seguida, imprima os detalhes 
+da n-esima struct, n é lido do teclado. 
+Detalhe: não salve a struct em um vetor. 
+Dica: Use fseek().
+

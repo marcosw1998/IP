@@ -1,0 +1,64 @@
+Sintaxes importantes
+
+Alocação de vetores e matrizes
+
+int *p;
+INT **m;
+
+p = (int*) malloc(n* sizeof(int))
+onde n é a quantidade de linhas
+e c a quantidade de colunas
+m = (int**) malloc(n*sizeof(int*))
+if (m == NULL)
+{
+	printf("Fufu");
+	exit(1);
+}
+for(i=0;i<n;i++)
+{
+    m[i] = (int*) malloc(c * sizeof(int))
+ if (m[i] == NULL)
+{
+	printf("Fufu");
+	exit(1);
+}
+}
+realloc
+ponteiro =(int *) realloc( ponteiro, n*sizeof(int) );
+
+
+arquivos
+modos de abertura
+
+FILE *arq;
+
+arq = fopen("nome_do_arqivo.extensao","xt ou xb");
+if (arq == NULL)
+printf("TUDO ERRADO\n");
+
+x pode ser
+r+ para leitura e escrita, caso não exista é criado
+w+ subscreve o anterior, para leitura e escrita, caso não exista é criado
+a+ para leitura ou para escrita no final do arquivo, não apaga o pré existente
+ 
+assim como abrimos tem de fechar
+fclose(arq);
+
+funções principais arq txt
+fscanf(arq ,"tipo da variável a ser procurada"," onde ficará salvo");
+exemplo: fscanf(arq,"%d\n",&n);
+
+fprintf(arq,"O que quero escrever %tipo",nome da variável);
+scanf("%f", &nota);
+fprintf(arq, "Matematica: %.2f\n", nota);
+
+fgetc para ler caractere por caractere 
+char ch;
+c= fgetc(arq);
+
+caso queria saber onde é o fin do arquivo vou comparando com EOF
+exemplo:
+while( (fscanf(arq,"%c %c %c\n", &ch1, &ch2, &ch3))!=EOF )
+			printf("%c %c %c\n", ch1, ch2, ch3);
+while( (ch=fgetc(arq))!= EOF )	
+
